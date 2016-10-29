@@ -8,9 +8,9 @@ basket_b = '0008342310' # Basket B - Non Sticker
 basket_a_speak = ['Chocolate comes from cocoa, which is a tree. That makes it a plant. Therefore, chocolate is salad.','Damn, I forgot to go to the gym today. Thats 10 years in a row now...']
 basket_b_speak = ['Im learning the hokey cokey. Not all of it. But  Ive got the ins and outs.','Ive got very sensitive teeth. Theyll probably be upset Ive told you.']
 
-#while True:
+while True:
 
-for x in range(0, 10):
+#for x in range(0, 10):
 
     x = raw_input()
 
