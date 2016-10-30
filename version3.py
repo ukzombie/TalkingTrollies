@@ -3,6 +3,9 @@ from random import randint
 from array import *
 import time
 
+male = 'true' #this is a global flag that defines if this is the male or the female basket
+
+
 basket_a = '0010580093' # Basket A - Sticker
 basket_b = '0008342310' # Basket B - Non Sticker
 
@@ -42,10 +45,11 @@ while True:
 
     x = raw_input() # get the input from the keyboard buffer which in our case is the raspberry
 
-    time.sleep(1)
+    time.sleep(1) # this is agrace period that stops the basket from talking too soon after the beep on the scanner
 
     phrase_n = randint(0,1) # this randonly picks a response
 
+    # -- CONVERSATION between baskets
     if x == basket_a:
         
         # 1 Say Hello
@@ -71,20 +75,54 @@ while True:
         phrase = 'Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha'
         os.system("espeak -ven+f1 -k5 -s250 '" + phrase + "'")
 
+    # -- END CONVERSATION BETWEEN BASKETS
+
+    # -- START OF ITEMS SCANNING
+    
+    # NEWSPAPER
     elif x == newspaper:
-        print 'newspaper was detected'
 
+        if male == 'true':
+            print 'male newspaper'
+        else:
+            print 'female newspaper'
+
+    # MARSHMALLOWS
     elif x == marshmallows:
-        print 'marshmallows were detected'
+        
+        if male == 'true':
+            print 'male marshmallows'
+        else:
+            print 'female marshmallows'
 
+    # MINT TEA
     elif x == mint_tea:
-        print 'mint tea was detected'
 
+        if male == 'true':
+            print 'male mint tea'
+        else :
+            print 'female mint tea'
+
+    # RHUBARB AND CUSTARD
     elif x == rhubarb_and_custard:
-        print 'rhubarb and custard was detected'
 
+        if male == 'true':
+            print 'male rhubarb and custard'
+        else:
+            print 'female rhubarb and custard'
+
+    # ENERGY DRINK
     elif x == energy_drink:
-        print 'energy drink was detected'
 
+        if male == 'true':
+            print 'male energy drink'
+        else:
+            print 'female energy drink'
+
+    # PERONI
     elif x == peroni:
-        print 'peroni was detected'
+
+        if male == 'true':
+            print 'male peroni'
+        else:
+            print 'female peroni'
