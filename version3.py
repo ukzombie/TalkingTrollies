@@ -24,12 +24,12 @@ baskets_hello = [
 ]
 
 basket_a_speak = [
-    'Chocolate comes from cocoa, which is a tree. That makes it a plant. Therefore, chocolate is salad.',
-    'Damn, I forgot to go to the gym today. Thats 10 years in a row now...'
+    'Have you heard about the oyster, who went into a disco and pulled a muscle',
+    'Och! Damn, I forgot to go to the gym today. Thatll be 10 years in a row now...'
 ]
 
 basket_b_speak = [
-    'Im learning the hokey cokey. Not all of it. But Ive got the ins and outs.',
+    'I am learning the hokey cokey. Not all of it. But  Ive got the ins and outs.',
     'Ive got very sensitive teeth. Theyll probably be upset Ive told you.'
 ]
 
@@ -54,12 +54,12 @@ while True:
         
         # 1 Say Hello
         phrase = baskets_hello[phrase_n]
-        os.system("espeak -ven+m1 -k5 -s150 '" + phrase + "'")
+        os.system("espeak -ven-sc+f2 -p70 -k5 -s180 '" + phrase + "'")
         # 2 Wait
         time.sleep(3)
         # 3 Say a Joke
         phrase = basket_a_speak[phrase_n]
-        os.system("espeak -ven+m1 -k5 -s150 '" + phrase + "'")
+        os.system("espeak -ven-sc+f2 -p70 -k5 -s180 '" + phrase + "'")
         time.sleep(3)
      
     elif x == basket_b:
@@ -68,12 +68,12 @@ while True:
         time.sleep(2)
         # 2 Say Hello Back
         phrase = baskets_hello[phrase_n]
-        os.system("espeak -ven+f1 -k5 -s150 '" + phrase + "'")
+        os.system("espeak -ven-wi+m7 -k5 -s150 '" + phrase + "'")
         # 3 Wait
         time.sleep(7)
         # 4 Laugh at Joke
         phrase = 'Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha'
-        os.system("espeak -ven+f1 -k5 -s250 '" + phrase + "'")
+        os.system("espeak -ven-wi+m7 -k5 -s150 '" + phrase + "'")
 
     # -- END CONVERSATION BETWEEN BASKETS
 
@@ -83,46 +83,58 @@ while True:
     elif x == newspaper:
 
         if male == 'true':
+            os.system("espeak -ven-wi+m7 -k5 -s150 'Newspaper'")
             print 'male newspaper'
         else:
+            os.system("espeak -ven-sc+f2 -p70 -k5 -s180 'Newspaper'")
             print 'female newspaper'
 
     # MARSHMALLOWS
     elif x == marshmallows:
         
         if male == 'true':
+            os.system("espeak -ven-wi+m7 -k5 -s150 'Marsmallows'")
             print 'male marshmallows'
         else:
+            os.system("espeak -ven-sc+f2 -p70 -k5 -s180 'Marshmallows'")
             print 'female marshmallows'
 
     # MINT TEA
     elif x == mint_tea:
 
         if male == 'true':
+            os.system("espeak -ven-wi+m7 -k5 -s150 'Mint Tea'")
             print 'male mint tea'
         else :
+            os.system("espeak -ven-sc+f2 -p70 -k5 -s180 'Mint Tea'")
             print 'female mint tea'
 
     # RHUBARB AND CUSTARD
     elif x == rhubarb_and_custard:
 
         if male == 'true':
+            os.system("espeak -ven-wi+m7 -k5 -s150 'Rhubarb and custard'")
             print 'male rhubarb and custard'
         else:
+            os.system("espeak -ven-sc+f2 -p70 -k5 -s180 'Rhubarb and custard'")
             print 'female rhubarb and custard'
 
     # ENERGY DRINK
     elif x == energy_drink:
 
         if male == 'true':
+            os.system("espeak -ven-wi+m7 -k5 -s150 'Energy Drink'")
             print 'male energy drink'
         else:
+            os.system("espeak -ven-sc+f2 -p70 -k5 -s180 'Energy Drink'")
             print 'female energy drink'
 
     # PERONI
     elif x == peroni:
 
         if male == 'true':
+            os.system("espeak -ven-wi+m7 -k5 -s150 'Peroni'")
             print 'male peroni'
         else:
+            os.system("espeak -ven-sc+f2 -p70 -k5 -s180 'Peroni'")
             print 'female peroni'
